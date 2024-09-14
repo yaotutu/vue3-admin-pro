@@ -5,6 +5,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
+import { viteMockServe } from 'vite-plugin-mock'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
@@ -24,6 +25,10 @@ export default defineConfig({
       iconDirs: [path.resolve(process.cwd(), 'src/assets/icons')],
       // Specify symbolId format
       symbolId: 'icon-[dir]-[name]'
+    }),
+    viteMockServe({
+      mockPath: 'mock',
+      enable: true
     })
   ],
   resolve: {
