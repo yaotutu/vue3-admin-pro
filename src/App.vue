@@ -5,8 +5,10 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import SvgIcon from './components/SvgIcon/SvgIcon.vue'
-</script>
+<script lang="ts" setup></script>
 
-<style scoped></style>
+<style scoped lang="scss">
+h1 {
+  color: $base-menu-background;
+}
+</style>
